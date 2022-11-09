@@ -1,0 +1,33 @@
+// Section Feature-request
+
+.section-feature-request {
+  .container-feature-request {
+    background-color: white;
+    border-radius: 50px 0 0 0;
+    padding: 30px;
+    text-align: center;
+    border: 1px solid grey;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+
+  &.hidden {
+    transform: translateY(140px);
+    transition: transform 1s ease;
+
+    &:hover, &:focus, &:focus-within {
+      transform: translateY(0);
+    }
+  }
+}

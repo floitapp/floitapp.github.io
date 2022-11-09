@@ -1,0 +1,44 @@
+// Shared Generic styles
+
+.visually-hidden {
+  visibility: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .centered {
+    width: auto;
+  }
+}
+
+section {
+  position: relative;
+  padding: 60px 0;
+
+  &.no-pad {
+    padding: 0;
+  }
+}
+
+.row-relative {
+  position: relative;
+}
+
+.row-relative {
+  position: relative;
+}
+
+.heading-center {
+  display: inline-block;
+  width: auto;
+  text-align: center;
+  margin: 0 auto;
+}

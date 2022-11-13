@@ -50,22 +50,23 @@
           <form id="signup-form" class="signup-form h4 form-grid">
             <!-- <div class="form-grid"> -->
               <label class="grid-col-1 grid-row-1" for="person">I'm</label>
-              <select id="person" class="grid-col-2 grid-row-1 block-item" name="id" form="signup-form">
+              <select id="person" class="grid-col-2 grid-row-1 block-item" name="type" form="signup-form">
                 <option value="angel">an angel</option>
                 <option value="founder" selected>a founder</option>
                 <option value="employee">working in startups</option>
               </select>
               <label class="grid-col-1 grid-row-2" for="communication">and I want to</label>
-              <select id="communication" class="grid-col-2 grid-row-2 block-item" name="price" form="signup-form">
-                <option value="learn-more-once" selected>learn more</option>
-                <option value="learn-more-monthly">get monthly updates</option>
-                <option value="join-beta-test">become a beta tester</option>
+              <select id="communication" class="grid-col-2 grid-row-2 block-item" name="updates" form="signup-form">
+                <option value="learn-more" selected>learn more</option>
+                <option value="get-monthly-updates">get monthly updates</option>
+                <option value="become-a-beta-tester">become a beta tester</option>
                 <option value="know-when-you-launch">know when you launch</option>
               </select>
               <label class="grid-col-1 grid-row-3" for="email">email me at</label>
-              <input type="email" id="email" class="grid-col-2 grid-row-3 block-item" name="name" form="signup-form" placeholder="me@my_startup.com"></input>
+              <input type="email" id="email" class="grid-col-2 grid-row-3 block-item" name="email" form="signup-form" placeholder="me@my_startup.com"></input>
             <!-- </div> -->
               <button data-button-form-submit class="submit-button btn btn-dark">Sign Me Up</button>
+              <p><small class="response"></small></div>
           </form>
         </div>
       </div>

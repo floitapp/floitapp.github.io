@@ -18,7 +18,7 @@ class App {
         console.log(ev);
       }
       // request.open("PUT", "https://bwe9las6e7.execute-api.eu-west-1.amazonaws.com/default/readWriteDynamoDB/");
-      request.open("PUT", "https://mx7v8u910g.execute-api.eu-west-1.amazonaws.com/items");
+      request.open("POST", "https://mx7v8u910g.execute-api.eu-west-1.amazonaws.com/items");
       request.setRequestHeader('Content-type', 'application/json');
       // const testData = JSON.parse({id: '987654', price: '12345', name: 'myitem'});
       const json = '{"id":true, "count":42}';

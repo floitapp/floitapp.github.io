@@ -4,7 +4,6 @@
   padding: 100px 0;
 
   .signup-form {
-    line-height: 2;
     line-height: 1.1;
 
     label {
@@ -20,8 +19,11 @@
     }
 
     .submit-button {
-      margin-top: 35px;
-      margin-top: 0px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      @include media-breakpoint-down(sm) {
+        margin-top: 10px;
+      }
     }
   }
 
@@ -43,7 +45,7 @@
       margin-top: 20px;
       display: grid;
       grid-template-columns: repeat(2, 50%);
-      grid-template-rows: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr);
       grid-row-gap: 7px;
       grid-column-gap: 3px;
 

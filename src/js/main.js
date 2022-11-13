@@ -32,10 +32,11 @@ class App {
 
         if (response.status === 200) {
           responseEl.innerText = 'You\'ve been added to our email list';
+          ev.target.classList.add('disabled');
         } else {
           responseEl.innerText = 'Something went wrong, please try again later, or drop us an email at hello@floit.app';
         }
-        const resData = await response.json();
+        // const resData = await response.json();
       } catch (error) {
         console.log(error);
       }

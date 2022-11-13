@@ -13,10 +13,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
-  .centered {
-    width: auto;
-  }
 }
 
 section {
@@ -26,19 +22,4 @@ section {
   &.no-pad {
     padding: 0;
   }
-}
-
-.row-relative {
-  position: relative;
-}
-
-.row-relative {
-  position: relative;
-}
-
-.heading-center {
-  display: inline-block;
-  width: auto;
-  text-align: center;
-  margin: 0 auto;
 }

@@ -1,58 +1,33 @@
 // Section Video
 
 .section-video {
-  // .video-headline {
-  //   text-align: center;
-  // }
-  //
-  // .walk-through-video {
-  //   background-color: black;
-  // }
-  //
-  // .headline-container {
-  //   position: absolute;
-  //   z-index: 1;
-  //   color: white;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  //   top: 160px;
-  // }
-  //
-  // .play-pause-icon-container {
-  //   position: absolute;
-  //   transform: translate(-50%, -50%);
-  //   width: auto;
-  //   left: 50%;
-  //   top: 50%;
-  //   filter: invert(1);
-  // }
-  //
-  // .display-none {
-  //   display: none; // @TODO, is this useful
-  // }
-  //
-  // &[playing] .play-icon {
-  //   display: none;
-  // }
+  background-color: black;
 
   .col-video {
-    // @TODO, make this responsive to 100% and then use a fallback image
-    // https://getbootstrap.com/docs/5.0/layout/breakpoints/
     display: flex;
-    border: 1px solid black;
-    width: 560px;
-    height: 315px;
-
-    width: 720px;
-    height: 405px;
-
-    width: 960px;
-    height: 540px;
-
-    width: 1024px;
-    height: 576px;
-
-    // width: 1280px;
-    // height: 720px;
+    width: 256px;
+    height: 144px;
+    width: 90vw;
+    height: calc(90vw / 16 * 9);
+    @include media-breakpoint-up(sm) {
+      width: 560px;
+      height: 315px;
+    }
+    @include media-breakpoint-up(md) {
+      width: 720px;
+      height: 405px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 960px;
+      height: 540px;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 1024px;
+      height: 576px;
+    }
+    @include media-breakpoint-up(xxl) {
+      width: 1024px;
+      height: 576px;
+    }
   }
 }

@@ -1,0 +1,25 @@
+
+// Import Google Font
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
+body {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+}
+
+.hero-headline {
+  font-weight: 700;
+  line-height: 1.2;
+  @include media-breakpoint-up(sm) {
+    font-size: 32px;
+  }
+  @include media-breakpoint-up(md) {
+    font-size: 50px;
+  }
+  @include media-breakpoint-up(lg) {
+    font-size: calc(1.525rem + 3.3vw);
+  }
+
+  .highlight {
+    font-weight: 300;
+  }
+}

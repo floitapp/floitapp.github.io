@@ -15,11 +15,16 @@ class App {
         ev.preventDefault();
         const formEl = findForm(ev.target);
         const responseEl = formEl.querySelector('.response');
+        responseEl.innerText = '…thanks, we\'ll be in touch!';
         const formData = new FormData(formEl);
+        let timestamp = new Date;
+        timestamp.toString();
         const data = {
           type: formData.get('type'),
           updates: formData.get('updates'),
-          email: formData.get('email')
+          email: formData.get('email'),
+          querystring: window.location.search.replace('?', ''),
+          timestamp
         }
         const url = 'https://mx7v8u910g.execute-api.eu-west-1.amazonaws.com/items';
         const response = await fetch(url, {
@@ -32,9 +37,8 @@ class App {
 
         if (response.status === 200) {
           responseEl.innerText = 'You\'ve been added to our email list';
-          ev.target.classList.add('disabled');
         } else {
-          responseEl.innerText = 'Something went wrong, please try again later, or drop us an email at hello@floit.app';
+          responseEl.innerText = 'Something went wrong, please try again later or drop us an email at hello@floit.app';
         }
         // const resData = await response.json();
       } catch (error) {

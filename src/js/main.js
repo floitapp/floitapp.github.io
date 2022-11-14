@@ -36,7 +36,7 @@ class App {
         });
 
         if (response.status === 200) {
-          responseEl.innerText = 'You\'ve been added to our email list';
+          // responseEl.innerText = 'You\'ve been added to our email list';
         } else {
           responseEl.innerText = 'Something went wrong, please try again later or drop us an email at hello@floit.app';
         }

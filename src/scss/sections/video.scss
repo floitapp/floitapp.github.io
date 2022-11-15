@@ -29,5 +29,10 @@
       width: 1024px;
       height: 576px;
     }
+
+    // @todo remove when src url is added
+    iframe {
+      border: 1px solid white;
+    }
   }
 }

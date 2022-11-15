@@ -14,6 +14,7 @@ class App {
       try {
         ev.preventDefault();
         const formEl = findForm(ev.target);
+        ev.target.classList.add('disabled');
         const responseEl = formEl.querySelector('.response');
         responseEl.innerText = '…thanks, we\'ll be in touch!';
         const formData = new FormData(formEl);
@@ -40,6 +41,9 @@ class App {
         } else {
           responseEl.innerText = 'Something went wrong, please try again later or drop us an email at hello@floit.app';
         }
+        setTimeout(() => {
+          ev.target.classList.remove('disabled');
+        }, 750)
         // const resData = await response.json();
       } catch (error) {
         console.log(error);

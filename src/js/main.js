@@ -1,0 +1,63 @@
+// Import CSS
+import '../scss/styles.scss';
+
+// Import all of Bootstrap's JS
+// import * as bootstrap from 'bootstrap';
+
+class App {
+  constructor() {
+
+    const el = document.querySelector('[data-button-form-submit]');
+    el.addEventListener('click', handleClick);
+
+    async function handleClick(ev) {
+      try {
+        ev.preventDefault();
+        const formEl = findForm(ev.target);
+        ev.target.classList.add('disabled');
+        const responseEl = formEl.querySelector('.response');
+        responseEl.innerText = '…thanks, we\'ll be in touch!';
+        const formData = new FormData(formEl);
+        let timestamp = new Date;
+        timestamp.toString();
+        const data = {
+          type: formData.get('type'),
+          updates: formData.get('updates'),
+          email: formData.get('email'),
+          querystring: window.location.search.replace('?', ''),
+          timestamp
+        }
+        const url = 'https://fdgi3hbudk.execute-api.eu-west-1.amazonaws.com/items';
+        const response = await fetch(url, {
+          method: 'PUT',
+          headers: {
+            'Content-type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+
+        if (response.status === 200) {
+          // responseEl.innerText = 'You\'ve been added to our email list';
+        } else {
+          responseEl.innerText = 'Something went wrong, please try again later or drop us an email at hello@floit.app';
+        }
+        setTimeout(() => {
+          ev.target.classList.remove('disabled');
+        }, 750)
+        // const resData = await response.json();
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+      function findForm(el) {
+        if (el.nodeName === 'FORM') {
+          return el;
+        } else {
+          return findForm(el.parentElement);
+        }
+      }
+    }
+  }
+
+  const app = new App;

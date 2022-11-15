@@ -1,0 +1,38 @@
+// Section Video
+
+.section-video {
+  background-color: black;
+
+  .col-video {
+    display: flex;
+    width: 256px;
+    height: 144px;
+    width: 90vw;
+    height: calc(90vw / 16 * 9);
+    @include media-breakpoint-up(sm) {
+      width: 560px;
+      height: 315px;
+    }
+    @include media-breakpoint-up(md) {
+      width: 720px;
+      height: 405px;
+    }
+    @include media-breakpoint-up(lg) {
+      width: 960px;
+      height: 540px;
+    }
+    @include media-breakpoint-up(xl) {
+      width: 1024px;
+      height: 576px;
+    }
+    @include media-breakpoint-up(xxl) {
+      width: 1024px;
+      height: 576px;
+    }
+
+    // @todo remove when src url is added
+    iframe {
+      border: 1px solid white;
+    }
+  }
+}

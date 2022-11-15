@@ -8,7 +8,8 @@
     "start": "webpack serve --mode development & npm run open",
     "open": "open http://localhost:8080",
     "stop": "kill $(lsof -t -i:8080)",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "deploy": "git checkout launch && npm run build && mkdir ~/tempFloitFolder && cp -r dist ~/tempFloitFolder && git checkout main && cp ~/tempFloitFolder/dist/index.html index.html && cp ~/tempFloitFolder/dist/main.js main.js && cp -r ~/tempFloitFolder/dist/images images/ && rm -rf ~/tempFloitFolder && git add . && git commit -m \"new build on main\" && git push"
   },
   "keywords": [],
   "author": "",

@@ -26,7 +26,7 @@ class App {
           querystring: window.location.search.replace('?', ''),
           timestamp
         }
-        const url = 'https://mx7v8u910g.execute-api.eu-west-1.amazonaws.com/items';
+        const url = 'https://fdgi3hbudk.execute-api.eu-west-1.amazonaws.com/items';
         const response = await fetch(url, {
           method: 'PUT',
           headers: {

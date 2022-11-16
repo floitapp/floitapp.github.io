@@ -17,3 +17,9 @@ Link : [https://hello.floit.app/](https://hello.floit.app/)
 ## Analytics
 
   - tbc
+
+## Page Metrics
+
+  [https://pagespeed.web.dev/report?url=https%3A%2F%2Fhello.floit.app%2F](https://pagespeed.web.dev/report?url=https%3A%2F%2Fhello.floit.app%2F)
+
+  [https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Fhello.floit.app%2F](https://developers.facebook.com/tools/debug/?q=https%3A%2F%2Fhello.floit.app%2F)

@@ -19,10 +19,11 @@
     }
 
     .submit-button {
-      margin-top: 25px;
-      margin-bottom: 10px;
+      margin-top: 40px;
+      margin-bottom: 30px;
       @include media-breakpoint-down(sm) {
-        margin-top: 10px;
+        margin-top: 30px;
+        margin-bottom: 37px;
       }
     }
   }
@@ -44,7 +45,7 @@
     @include media-breakpoint-up(sm) {
       margin-top: 20px;
       display: grid;
-      grid-template-columns: repeat(2, 50%);
+      grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, 1fr);
       grid-row-gap: 10px;
       grid-column-gap: 8px;

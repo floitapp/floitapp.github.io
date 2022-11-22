@@ -18,6 +18,9 @@ body {
   @include media-breakpoint-up(lg) {
     font-size: calc(1.525rem + 3.3vw);
   }
+  @include media-breakpoint-up(xxl) {
+    font-size: 74px;
+  }
 
   .highlight {
     font-weight: 300;

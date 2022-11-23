@@ -38,21 +38,17 @@ footer {
 
   .logo {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    position: relative;
+    justify-content: flex-end;
 
-    .right {
-      display: flex;
-      justify-content: flex-end;
-      margin: 0;
+    &-wrapper {
+      display: inline-flex;
+      text-align: center;
+      flex-direction: column;
     }
 
     .copyright {
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      padding: inherit;
+      margin-top: 1rem;
+      margin-bottom: 0;
     }
   }
 

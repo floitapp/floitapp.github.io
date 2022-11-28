@@ -55,6 +55,7 @@ footer {
   @include media-breakpoint-down(sm) {
     .xs-column {
       flex-direction: column;
+      grid-row-gap: 20px;
     }
     .logo {
       display: none;

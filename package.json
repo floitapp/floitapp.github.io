@@ -9,8 +9,15 @@
     "open": "open http://localhost:8080",
     "stop": "kill $(lsof -t -i:8080)",
     "build": "webpack --mode=production",
-    "deploy": "git checkout launch && npm run stop && npm run build && git add . && git commit -m \"add built files\" && mkdir ~/tempFloitFolder && cp -r dist ~/tempFloitFolder && git checkout main && cp ~/tempFloitFolder/dist/index.html index.html && cp ~/tempFloitFolder/dist/main.js main.js && cp -r ~/tempFloitFolder/dist/images . && rm -rf ~/tempFloitFolder && git add . && git commit -m \"new build on main\"",
-    "deploy-commit": "git checkout main && git push"
+    "deploy": "npm run commit-launch-files && npm run copy-built-files && npm run copy-html && npm run copy-js && npm run copy-images && remove-tempFolder && npm run commit-main",
+    "deploy-commit": "git checkout main && git push",
+    "commit-launch-files": "git checkout launch && npm run stop && npm run build && git add . && git commit -m \"add built files\"",
+    "copy-built-files": "mkdir ~/tempFloitFolder && cp -r dist ~/tempFloitFolder",
+    "copy-html": "git checkout main && cp ~/tempFloitFolder/dist/index.html index.html",
+    "copy-js": "cp ~/tempFloitFolder/dist/main.js main.js",
+    "copy-images": "cp -r ~/tempFloitFolder/dist/images .",
+    "remove-tempFolder": "rm -rf ~/tempFloitFolder",
+    "commit-main": "git add . && git commit -m \"new build on main\""
   },
   "keywords": [],
   "author": "",

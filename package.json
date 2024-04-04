@@ -1,0 +1,41 @@
+{
+  "name": "floit landing page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --mode development & npm run open",
+    "open": "open http://localhost:8080",
+    "stop": "kill $(lsof -t -i:8080)",
+    "build": "webpack --mode=production",
+    "deploy": "npm run commit-launch-files && npm run copy-built-files && npm run copy-html && npm run copy-js && npm run copy-images && remove-tempFolder && npm run commit-main",
+    "deploy-commit": "git checkout main && git push",
+    "commit-launch-files": "git checkout launch && npm run stop && npm run build && git add . && git commit -m \"add built files\"",
+    "copy-built-files": "mkdir ~/tempFloitFolder && cp -r dist ~/tempFloitFolder",
+    "copy-html": "git checkout main && cp ~/tempFloitFolder/dist/index.html index.html",
+    "copy-js": "cp ~/tempFloitFolder/dist/main.js main.js",
+    "copy-images": "cp -r ~/tempFloitFolder/dist/images .",
+    "remove-tempFolder": "rm -rf ~/tempFloitFolder",
+    "commit-main": "git add . && git commit -m \"new build on main\"",
+    "repo": "open https://github.com/floitapp/floitapp.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "css-loader": "^6.7.1",
+    "postcss-loader": "^7.0.1",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.1.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.6",
+    "bootstrap": "^5.2.2"
+  }
+}
